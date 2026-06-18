@@ -1,0 +1,30 @@
+<section id="projects" class="projects-section">
+  <h2 class="section-title">Proyectos destacados</h2>
+  <div class="projects-grid">
+    @for (project of projects; track project.title) {
+    <p-card [header]="project.title" class="project-card">
+      
+      <ng-template #header>
+        <div class="avatar-wrapper">
+          <img [src]="project.img" alt="foto de perfil" class="avatar" />
+        </div>
+      </ng-template>
+
+      <p class="project-description">{{ project.description }}</p>
+      <div class="tags">
+        @for (tag of project.tags; track tag) {
+        <p-tag [value]="tag" severity="secondary" style="background-color: rgb(255, 255, 255); color: #8b7caa;" />
+        }
+      </div>
+      <ng-template #footer>
+        <div class="project-action">
+          <a [href]="project.link" target="_blank">
+            <p-button icon="pi pi-external-link" class="hero-btn" (onClick)="project.link">Ver proyecto</p-button>
+          </a>
+        </div>
+      </ng-template>
+
+    </p-card>
+    }
+  </div>
+</section>

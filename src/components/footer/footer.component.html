@@ -1,0 +1,29 @@
+<footer class="footer">
+  <div class="footer-content">
+
+    <div class="footer-brand">
+      <span class="brand-name">Diana Bautista</span>
+      <p class="brand-tagline">Ingeniera en Software | Full Stack Developer</p>
+    </div>
+
+    <div class="footer-contact">
+      <a [href]="'mailto:' + email" class="email-link">
+        <i class="pi pi-envelope"></i>
+        {{ email }}
+      </a>
+    </div>
+
+    <div class="footer-socials">
+      @for (social of socials; track social.label) {
+        <a [href]="social.url" target="_blank" class="social-link" [attr.aria-label]="social.label">
+          <i [class]="social.icon"></i>
+        </a>
+      }
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; {{ currentYear }} Diana Bautista. Todos los derechos reservados.</span>
+  </div>
+</footer>

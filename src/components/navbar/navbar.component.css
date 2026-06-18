@@ -1,0 +1,220 @@
+.brand {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: 500;
+  margin-right: 1rem;
+  white-space: nowrap;
+  transition: color 0.4s ease;
+}
+
+/* Barra principal */
+:host ::ng-deep .p-menubar {
+  border-radius: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  border: none;
+  box-shadow: none;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Links e iconos generales */
+:host ::ng-deep .p-menubar .p-menubar-item-link,
+:host ::ng-deep .p-menubar .p-menubar-item-label,
+:host ::ng-deep .p-menubar .p-menubar-item-icon,
+:host ::ng-deep .p-menubar .p-submenu-icon,
+:host ::ng-deep .p-menubar .p-menubar-button {
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+/* Hover/focus generales */
+:host ::ng-deep .p-menubar .p-menubar-item-content,
+:host ::ng-deep .p-menubar .p-menubar-item-link {
+  background: transparent !important;
+}
+
+:host ::ng-deep .p-menubar .p-menubar-item-link:focus,
+:host ::ng-deep .p-menubar .p-menubar-item-link:hover,
+:host ::ng-deep .p-menubar .p-menubar-item.p-focus > .p-menubar-item-content,
+:host ::ng-deep .p-menubar .p-menubar-item.p-menubar-item-active > .p-menubar-item-content {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* =========================
+   LANDING
+   ========================= */
+:host([data-section='landing']) ::ng-deep .p-menubar {
+  background-color: #d9badc;
+  color: #ffffff;
+}
+
+:host([data-section='landing']) .brand {
+  color: #6f4380;
+}
+
+:host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-item-link,
+:host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-item-label,
+:host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-item-icon,
+:host([data-section='landing']) ::ng-deep .p-menubar .p-submenu-icon,
+:host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-button {
+  color: #6f4380 !important;
+}
+
+/* =========================
+   ABOUT
+   ========================= */
+:host([data-section='about']) ::ng-deep .p-menubar {
+  background-color: #8798df;
+  color: #ffffff;
+}
+
+:host([data-section='about']) .brand {
+  color: #ffffff;
+}
+
+:host([data-section='about']) ::ng-deep .p-menubar .p-menubar-item-link,
+:host([data-section='about']) ::ng-deep .p-menubar .p-menubar-item-label,
+:host([data-section='about']) ::ng-deep .p-menubar .p-menubar-item-icon,
+:host([data-section='about']) ::ng-deep .p-menubar .p-submenu-icon,
+:host([data-section='about']) ::ng-deep .p-menubar .p-menubar-button {
+  color: #ffffff !important;
+}
+
+/* =========================
+   HERRAMIENTAS
+   ========================= */
+:host([data-section='herramientas']) ::ng-deep .p-menubar {
+  background-color: #9e8cdd;
+  color: #ffffff;
+
+}
+
+:host([data-section='herramientas']) .brand {
+  color: #ffffff;
+}
+
+:host([data-section='herramientas']) ::ng-deep .p-menubar .p-menubar-item-link,
+:host([data-section='herramientas']) ::ng-deep .p-menubar .p-menubar-item-label,
+:host([data-section='herramientas']) ::ng-deep .p-menubar .p-menubar-item-icon,
+:host([data-section='herramientas']) ::ng-deep .p-menubar .p-submenu-icon,
+:host([data-section='herramientas']) ::ng-deep .p-menubar .p-menubar-button {
+  color: #ffffff !important;
+}
+
+/* =========================
+   PROJECTS
+   ========================= */
+:host([data-section='projects']) ::ng-deep .p-menubar {
+  background-color: #c39bd8;
+  color: #ffffff;
+}
+
+:host([data-section='projects']) .brand {
+  color: #ffffff;
+}
+
+:host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-item-link,
+:host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-item-label,
+:host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-item-icon,
+:host([data-section='projects']) ::ng-deep .p-menubar .p-submenu-icon,
+:host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-button {
+  color: #ffffff !important;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 480px) {
+  .brand {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+  }
+
+  :host ::ng-deep .p-menubar {
+    padding: 0.4rem 0.6rem;
+  }
+
+  /* Panel desplegable móvil */
+  :host ::ng-deep .p-menubar .p-menubar-root-list {
+    border: none;
+    border-radius: 0 0 18px 18px;
+    overflow: hidden;
+    width: 90%;
+    left: 5%;
+  }
+
+  /* Fondo móvil por sección */
+  :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list {
+    background-color: #d9badc !important;
+  }
+
+  :host([data-section='about']) ::ng-deep .p-menubar .p-menubar-root-list {
+    background-color: #8798df !important;
+  }
+
+  :host([data-section='herramientas']) ::ng-deep .p-menubar .p-menubar-root-list {
+    background-color: #9e8cdd !important;
+  }
+
+  :host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-root-list {
+    background-color: #c39bd8 !important;
+  }
+
+  /* Links, texto e iconos dentro del menú móvil */
+  :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-link,
+  :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-label,
+  :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-icon,
+  :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list .p-submenu-icon {
+    color: #6f4380 !important;
+  }
+
+  :host([data-section='about']) ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-link,
+  :host([data-section='about']) ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-label,
+  :host([data-section='about']) ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-icon,
+  :host([data-section='about']) ::ng-deep .p-menubar .p-menubar-root-list .p-submenu-icon,
+  :host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-link,
+  :host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-label,
+  :host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-icon,
+  :host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-root-list .p-submenu-icon {
+    color: #ffffff !important;
+  }
+
+  /* Fondo de cada item en móvil */
+  :host ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-content,
+  :host ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-link {
+    background: transparent !important;
+  }
+
+  :host ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-link:hover,
+  :host ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-link:focus,
+  :host ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item.p-focus > .p-menubar-item-content,
+  :host ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item.p-menubar-item-active > .p-menubar-item-content {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Fuerza el primer item, por si PrimeNG lo pinta distinto */
+  :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content,
+  :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content > .p-menubar-item-link,
+  :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content > .p-menubar-item-link .p-menubar-item-label,
+  :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content > .p-menubar-item-link .p-menubar-item-icon {
+    background: transparent !important;
+    color: #6f4380 !important;
+  }
+
+  :host([data-section='about']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content,
+  :host([data-section='about']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content > .p-menubar-item-link,
+  :host([data-section='about']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content > .p-menubar-item-link .p-menubar-item-label,
+  :host([data-section='about']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content > .p-menubar-item-link .p-menubar-item-icon,
+  :host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content,
+  :host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content > .p-menubar-item-link,
+  :host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content > .p-menubar-item-link .p-menubar-item-label,
+  :host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content > .p-menubar-item-link .p-menubar-item-icon {
+    background: transparent !important;
+    color: #ffffff !important;
+  }
+}
