@@ -48,12 +48,12 @@
    LANDING
    ========================= */
 :host([data-section='landing']) ::ng-deep .p-menubar {
-  background-color: #d9badc;
+  background-color: #e6cde7;
   color: #ffffff;
 }
 
 :host([data-section='landing']) .brand {
-  color: #6f4380;
+  color: #996fa7;
 }
 
 :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-item-link,
@@ -61,14 +61,14 @@
 :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-item-icon,
 :host([data-section='landing']) ::ng-deep .p-menubar .p-submenu-icon,
 :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-button {
-  color: #6f4380 !important;
+  color: #996fa7 !important;
 }
 
 /* =========================
    ABOUT
    ========================= */
 :host([data-section='about']) ::ng-deep .p-menubar {
-  background-color: #8798df;
+  background-color: #A0ACE9;
   color: #ffffff;
 }
 
@@ -88,7 +88,7 @@
    HERRAMIENTAS
    ========================= */
 :host([data-section='herramientas']) ::ng-deep .p-menubar {
-  background-color: #9e8cdd;
+  background-color: #B4AFE7;
   color: #ffffff;
 
 }
@@ -109,7 +109,7 @@
    PROJECTS
    ========================= */
 :host([data-section='projects']) ::ng-deep .p-menubar {
-  background-color: #c39bd8;
+  background-color: #D8BEE5;
   color: #ffffff;
 }
 
@@ -149,19 +149,19 @@
 
   /* Fondo móvil por sección */
   :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list {
-    background-color: #d9badc !important;
+    background-color: #e6cde7 !important;
   }
 
   :host([data-section='about']) ::ng-deep .p-menubar .p-menubar-root-list {
-    background-color: #8798df !important;
+    background-color: #9face9 !important;
   }
 
   :host([data-section='herramientas']) ::ng-deep .p-menubar .p-menubar-root-list {
-    background-color: #9e8cdd !important;
+    background-color: #B4AFE7 !important;
   }
 
   :host([data-section='projects']) ::ng-deep .p-menubar .p-menubar-root-list {
-    background-color: #c39bd8 !important;
+    background-color: #D8BEE5 !important;
   }
 
   /* Links, texto e iconos dentro del menú móvil */
@@ -169,7 +169,7 @@
   :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-label,
   :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-icon,
   :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list .p-submenu-icon {
-    color: #6f4380 !important;
+    color: #996fa7 !important;
   }
 
   :host([data-section='about']) ::ng-deep .p-menubar .p-menubar-root-list .p-menubar-item-link,
@@ -203,7 +203,7 @@
   :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content > .p-menubar-item-link .p-menubar-item-label,
   :host([data-section='landing']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content > .p-menubar-item-link .p-menubar-item-icon {
     background: transparent !important;
-    color: #6f4380 !important;
+    color: #996fa7 !important;
   }
 
   :host([data-section='about']) ::ng-deep .p-menubar .p-menubar-root-list > .p-menubar-item:first-child > .p-menubar-item-content,

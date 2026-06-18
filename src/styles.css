@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(#d9badc, #8798df, #c39bd8, #d9badc);
+  background: linear-gradient(#e6cde7, #9aa9e9, #d1b5e4, #e6cde7);
 }
 
 html {
@@ -23,6 +23,8 @@ html {
   font-weight: 700;
   text-align: center;
   margin-bottom: 1rem;
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(111, 67, 128, 0.2);
 }
 
 /* ================================
