@@ -25,7 +25,7 @@ export class HerramientasComponent implements OnInit, OnDestroy {
     { name: 'Ionic',          level: 82, icon: 'pi pi-mobile',     category: 'frontend', color: '#ffffff' },
     { name: 'TypeScript',     level: 84, icon: 'pi pi-file-edit',  category: 'frontend', color: '#ffffff' },
     { name: 'HTML / CSS',     level: 90, icon: 'pi pi-palette',    category: 'frontend', color: '#ffffff' },
-    { name: 'React basico',   level: 58, icon: 'pi pi-desktop',    category: 'frontend', color: '#ffffff' },
+    { name: 'React',   level: 38, icon: 'pi pi-desktop',    category: 'frontend', color: '#ffffff' },
     { name: 'Node.js',        level: 76, icon: 'pi pi-server',     category: 'backend',  color: '#ffffff' },
     { name: 'Express',        level: 74, icon: 'pi pi-cog',        category: 'backend',  color: '#ffffff' },
     { name: 'Python',         level: 78, icon: 'pi pi-code',       category: 'backend',  color: '#ffffff' },
