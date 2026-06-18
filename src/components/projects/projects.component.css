@@ -11,22 +11,11 @@
   margin-top: 2rem;
 }
 
-:host ::ng-deep .project-card .p-card {
-  background: linear-gradient(
-    135deg,
-    rgba(78, 49, 112, 0.34),
-    rgba(150, 104, 183, 0.22),
-    rgba(255, 202, 246, 0.18)
-  ) !important;
-  border: 1px solid rgba(231, 216, 255, 0.34) !important;
-  color: #ffffff;
-}
-
 :host ::ng-deep .project-card .p-card-title {
   color: #ffffff;
   font-size: 1.25rem;
   font-weight: 800;
-  text-shadow: 0 2px 10px rgba(63, 31, 92, 0.15);
+  text-shadow: 0 2px 10px rgba(63, 31, 92, 0.2);
 }
 
 :host ::ng-deep .project-card .p-card-content {

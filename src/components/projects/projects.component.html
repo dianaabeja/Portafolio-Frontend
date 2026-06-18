@@ -13,7 +13,11 @@
       <p class="project-description">{{ project.description }}</p>
       <div class="tags">
         @for (tag of project.tags; track tag) {
-        <p-tag [value]="tag" severity="secondary" style="background-color: rgb(255, 255, 255); color: #8b7caa;" />
+        <p-tag
+          [value]="tag"
+          severity="secondary"
+          [style]="{ 'background-color': 'rgb(255, 255, 255)', color: '#8b7caa' }"
+        />
         }
       </div>
       <ng-template #footer>
