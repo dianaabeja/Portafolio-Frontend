@@ -6,16 +6,22 @@
       <p class="brand-tagline">Ingeniera en Software | Full Stack Developer</p>
     </div>
 
-    <div class="footer-contact">
+    <div class="footer-actions">
       <a [href]="'mailto:' + email" class="email-link">
         <i class="pi pi-envelope"></i>
         {{ email }}
+      </a>
+      <a href="/cv.pdf" download class="footer-cta">
+        Descargar CV
+      </a>
+      <a href="https://www.linkedin.com/in/dianalaurabautistagarcia/" target="_blank" rel="noopener noreferrer" class="footer-cta">
+        Ver perfil en LinkedIn
       </a>
     </div>
 
     <div class="footer-socials">
       @for (social of socials; track social.label) {
-        <a [href]="social.url" target="_blank" class="social-link" [attr.aria-label]="social.label">
+        <a [href]="social.url" target="_blank" rel="noopener noreferrer" class="social-link" [attr.aria-label]="social.label">
           <i [class]="social.icon"></i>
         </a>
       }

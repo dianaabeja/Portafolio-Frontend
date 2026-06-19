@@ -5,9 +5,12 @@ import { Tag } from 'primeng/tag';
 
 interface Project {
   title: string;
+  role: string;
   description: string;
+  highlights: string[];
   tags: string[];
   link: string;
+  repo: string;
   icon: string;
   img?: string;
 }
@@ -22,25 +25,46 @@ export class ProjectsComponent {
   projects: Project[] = [
     {
       title: 'Nova Biometrics',
-      description: 'Experiencia frontend para un laboratorio clinico ficticio con CMS mock funcional. Permite editar contenido, imagenes, SEO, certificaciones, FAQs y estilos desde el navegador, mostrando administracion en tiempo real sin depender de una API.',
+      role: 'Frontend · UI/UX · CMS mock',
+      description: 'CMS administrativo para laboratorio con edición visual, SEO y certificaciones.',
+      highlights: [
+        'Componentes de administración y edición de contenido',
+        'Diseño responsivo y experiencia de usuario',
+        'Validación de flujos clave para uso interno'
+      ],
       tags: ['Angular', 'TypeScript', 'SCSS', 'CMS Mock'],
       link: 'https://nova-labs-chi.vercel.app/',
+      repo: 'https://github.com/dianaabeja/novaLabs',
       icon: 'pi pi-code',
       img: 'proyect3.png'
     },
     {
       title: 'Mi Jardin',
-      description: 'App web pensada para cuidar plantas de forma simple: organiza tu jardin, consulta informacion de cuidados y recibe recordatorios de riego para mantener cada planta al dia.',
+      role: 'Frontend · Product design',
+      description: 'Aplicación para organizar cuidados de plantas y seguimiento simple del estado del jardín.',
+      highlights: [
+        'Flujos de registro y seguimiento por planta',
+        'Vista clara para tareas frecuentes',
+        'Diseño enfocado en reutilización y usabilidad'
+      ],
       tags: ['Angular', 'TypeScript'],
       link: 'https://mi-jardin-phi.vercel.app/',
+      repo: 'https://github.com/dianaabeja/MiJardin',
       icon: 'pi pi-globe',
       img: 'proyect1.png'
     },
     {
       title: 'Mi Veterinaria',
-      description: 'Sistema administrativo para veterinaria con productos, ventas, pacientes y recetas medicas en PDF. Incluye control de roles, donde cada perfil accede a funcionalidades distintas segun sus permisos.',
+      role: 'Frontend · Administración',
+      description: 'Sistema para gestión de pacientes, productos y recetas con control de roles.',
+      highlights: [
+        'Gestión de módulos clave para el negocio',
+        'Permisos por perfil y navegación clara',
+        'Integración de reportes y documentos básicos'
+      ],
       tags: ['React', 'TypeScript', 'Tailwind CSS'],
       link: 'https://mi-veterinaria-puce.vercel.app/',
+      repo: 'https://github.com/dianaabeja/MiVeterinaria',
       icon: 'pi pi-heart',
       img: 'proyect2.png'
     }

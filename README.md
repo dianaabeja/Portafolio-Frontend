@@ -1,59 +1,67 @@
 # PortfolioFrontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+A modern Angular portfolio designed to showcase projects, skills, and professional experience in a clean and responsive layout.
 
-## Development server
+## ✨ Overview
 
-To start a local development server, run:
+This project was created to present a personal brand through a polished frontend, with sections for:
+
+- Hero / landing introduction
+- About section
+- Technical stack
+- Featured projects
+- Contact and call-to-action buttons
+
+## 🛠️ Tech Stack
+
+- Angular 19
+- TypeScript
+- HTML / CSS
+- PrimeNG
+- RxJS
+
+## 📦 Installation
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+## ▶️ Run locally
+
+Start the development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Then open:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## 🧪 Build for production
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The production output will be generated in the `dist/` folder.
 
-## Running unit tests
+## 📁 Project Structure
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- `src/app` — main application components and routes
+- `src/components` — reusable UI sections (landing, about, projects, navbar, footer)
+- `src/assets` — images and static resources
+- `src/styles.css` — global styles and theme settings
 
-```bash
-ng test
-```
+## 🌐 Notes
 
-## Running end-to-end tests
+- The portfolio is designed to be responsive across desktop and mobile screens.
+- Content and visual styling can be adjusted easily for future updates.
 
-For end-to-end (e2e) testing, run:
+## 📄 License
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project is for personal/demo use unless otherwise specified.

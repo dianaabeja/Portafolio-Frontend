@@ -6,11 +6,23 @@
       
       <ng-template #header>
         <div class="avatar-wrapper">
-          <img [src]="project.img" alt="foto de perfil" class="avatar" />
+          <img
+            [src]="project.img"
+            [alt]="'Captura del proyecto ' + project.title"
+            class="avatar"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </ng-template>
 
+      <p class="project-role">{{ project.role }}</p>
       <p class="project-description">{{ project.description }}</p>
+      <ul class="project-highlights">
+        @for (highlight of project.highlights; track highlight) {
+          <li>{{ highlight }}</li>
+        }
+      </ul>
       <div class="tags">
         @for (tag of project.tags; track tag) {
         <p-tag
@@ -22,8 +34,11 @@
       </div>
       <ng-template #footer>
         <div class="project-action">
-          <a [href]="project.link" target="_blank">
-            <p-button icon="pi pi-external-link" class="hero-btn" (onClick)="project.link">Ver proyecto</p-button>
+          <a [href]="project.link" target="_blank" rel="noopener noreferrer">
+            <p-button icon="pi pi-external-link" class="hero-btn">Demo</p-button>
+          </a>
+          <a [href]="project.repo" target="_blank" rel="noopener noreferrer">
+            <p-button icon="pi pi-github" class="hero-btn">Repo</p-button>
           </a>
         </div>
       </ng-template>
