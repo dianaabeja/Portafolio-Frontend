@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, HostBinding } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostBinding, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { Menubar } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
 
@@ -17,8 +17,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
   ];
 
   @HostBinding('attr.data-section') activeSection = 'landing';
+  @ViewChild(Menubar) private menubar?: Menubar;
 
   private observer!: IntersectionObserver;
+
+  constructor(private el: ElementRef<HTMLElement>) {}
 
   ngOnInit() {
     this.observer = new IntersectionObserver(
@@ -33,6 +36,16 @@ export class NavbarComponent implements OnInit, OnDestroy {
       const el = document.getElementById(id);
       if (el) this.observer.observe(el);
     });
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const target = event.target as Node;
+    const clickedInside = this.el.nativeElement.contains(target);
+
+    if (!clickedInside) {
+      (this.menubar as any)?.hide?.();
+    }
   }
 
   ngOnDestroy() {

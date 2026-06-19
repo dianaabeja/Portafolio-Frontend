@@ -1,0 +1,19 @@
+<section id="stack" class="stack-section">
+  <h2 class="section-title">Stack técnico</h2>
+  <p class="stack-intro">
+    Una visión práctica de las tecnologías con las que trabajo para construir productos web y móviles.
+  </p>
+  <div class="stack-grid">
+    @for (area of stackAreas; track area.title) {
+      <article class="stack-card">
+        <h3>{{ area.title }}</h3>
+        <p>{{ area.description }}</p>
+        <ul>
+          @for (item of area.items; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </article>
+    }
+  </div>
+</section>

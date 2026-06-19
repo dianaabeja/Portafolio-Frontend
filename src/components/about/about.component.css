@@ -41,6 +41,33 @@
   text-wrap: pretty;
 }
 
+.technical-pillars {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.technical-pillars div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.75rem 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+
+.technical-pillars span {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #f2d5ff;
+}
+
+.technical-pillars strong {
+  font-size: 0.98rem;
+  color: #ffffff;
+}
+
 .experience-summary {
   display: grid;
   gap: 0.45rem;
@@ -87,6 +114,53 @@
 .profile-details p {
   margin: 0;
   font-size: 1rem;
+}
+
+.cv-download-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+}
+
+.cv-download-panel span {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f3d9ff;
+}
+
+.cv-download-panel h4 {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  padding: 0.82rem 1rem;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #a888db, #e2aae4) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  transition: box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.cv-download-btn:hover,
+.cv-download-btn:focus-visible {
+  filter: brightness(1.15);
+  box-shadow: 0 3px 18px 1px rgba(143, 90, 192, 0.35);
 }
 
 @media (max-width: 600px) {
