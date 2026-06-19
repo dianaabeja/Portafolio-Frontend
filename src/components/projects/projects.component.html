@@ -1,49 +1,100 @@
 <section id="projects" class="projects-section">
   <h2 class="section-title">Featured projects</h2>
+
   <div class="projects-grid">
     @for (project of projects; track project.title) {
-    <p-card [header]="project.title" class="project-card">
-      
-      <ng-template #header>
-        <div class="avatar-wrapper">
-          <img
-            [src]="project.img"
-            [alt]="'Screenshot of ' + project.title"
-            class="avatar"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-      </ng-template>
+      <p-card [header]="project.title" class="project-card">
+        <ng-template #header>
+          <div class="avatar-wrapper">
+            <img
+              [src]="project.img"
+              [alt]="'Screenshot of ' + project.title"
+              class="avatar"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </ng-template>
 
-      <p class="project-role">{{ project.role }}</p>
-      <p class="project-description">{{ project.description }}</p>
-      <ul class="project-highlights">
-        @for (highlight of project.highlights; track highlight) {
-          <li>{{ highlight }}</li>
-        }
-      </ul>
-      <div class="tags">
-        @for (tag of project.tags; track tag) {
-        <p-tag
-          [value]="tag"
-          severity="secondary"
-          [style]="{ 'background-color': 'rgb(255, 255, 255)', color: '#8b7caa' }"
-        />
-        }
-      </div>
-      <ng-template #footer>
-        <div class="project-action">
-          <a [href]="project.link" target="_blank" rel="noopener noreferrer">
-            <p-button icon="pi pi-external-link" class="hero-btn">Live</p-button>
-          </a>
-          <a [href]="project.repo" target="_blank" rel="noopener noreferrer">
-            <p-button icon="pi pi-github" class="hero-btn">Repo</p-button>
-          </a>
+        <p class="project-field-label">Role</p>
+        <p class="project-role">{{ project.role }}</p>
+        <p class="project-field-label">Overview</p>
+        <p class="project-description">{{ project.description }}</p>
+        <p class="project-field-label">Responsibilities</p>
+        <ul class="project-highlights">
+          @for (responsibility of project.responsibilities; track responsibility) {
+            <li>{{ responsibility }}</li>
+          }
+        </ul>
+        <p class="project-field-label">Technologies</p>
+        <div class="tags">
+          @for (tag of project.tags; track tag) {
+            <p-tag
+              [value]="tag"
+              severity="secondary"
+              [style]="{ 'background-color': 'rgb(255, 255, 255)', color: '#8b7caa' }"
+            />
+          }
         </div>
-      </ng-template>
-
-    </p-card>
+        <ng-template #footer>
+          <div class="project-action">
+            <a [href]="project.link" target="_blank" rel="noopener noreferrer">
+              <p-button icon="pi pi-external-link" class="hero-btn">Demo</p-button>
+            </a>
+            <a [href]="project.repo" target="_blank" rel="noopener noreferrer">
+              <p-button icon="pi pi-github" class="hero-btn">Repository</p-button>
+            </a>
+          </div>
+        </ng-template>
+      </p-card>
     }
   </div>
+
+  <p-card header="Architecture · Nova Biometrics" class="project-card architecture-card">
+    <div class="architecture-card__layout">
+      <div class="architecture-card__content">
+        <p class="project-field-label">Case study</p>
+        <p class="project-role">Multi-tenant CMS platform</p>
+        <p class="project-field-label">Architecture</p>
+        <p class="project-description">
+          A public landing and an administrative Angular CMS share a NestJS API for tenant
+          resolution, authentication, permissions, and PostgreSQL persistence through Prisma.
+        </p>
+        <p class="project-field-label">Key decisions</p>
+        <ul class="project-highlights">
+          <li>Separate public and administrative experiences.</li>
+          <li>Tenant configuration without duplicating the application.</li>
+          <li>Centralized security and business rules in the API.</li>
+        </ul>
+        <p class="project-field-label">Technologies</p>
+        <div class="tags">
+          @for (tag of ['Angular', 'NestJS', 'PostgreSQL', 'Prisma']; track tag) {
+            <p-tag
+              [value]="tag"
+              severity="secondary"
+              [style]="{ 'background-color': 'rgb(255, 255, 255)', color: '#8b7caa' }"
+            />
+          }
+        </div>
+      </div>
+
+      <figure class="architecture-preview">
+        <img
+          src="architecture-cms.svg"
+          alt="UML diagram of Nova Biometrics: the Angular landing and CMS consume a NestJS API connected to PostgreSQL and reporting services."
+          loading="lazy"
+        />
+      </figure>
+    </div>
+    <ng-template #footer>
+      <div class="project-action">
+        <a href="https://nova-labs-chi.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <p-button icon="pi pi-external-link" class="hero-btn">Demo</p-button>
+        </a>
+        <a href="https://github.com/dianaabeja/novaLabs" target="_blank" rel="noopener noreferrer">
+          <p-button icon="pi pi-github" class="hero-btn">Repository</p-button>
+        </a>
+      </div>
+    </ng-template>
+  </p-card>
 </section>
