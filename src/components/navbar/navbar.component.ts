@@ -10,10 +10,10 @@ import { MenuItem } from 'primeng/api';
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   items: MenuItem[] = [
-    { label: 'Inicio',      icon: 'pi pi-home',      command: () => this.scrollTo('landing') },
-    { label: 'Sobre mí',    icon: 'pi pi-user',      command: () => this.scrollTo('about') },
-    { label: 'Habilidades', icon: 'pi pi-star',      command: () => this.scrollTo('herramientas') },
-    { label: 'Proyectos',   icon: 'pi pi-briefcase', command: () => this.scrollTo('projects') }
+    { label: 'Home',      icon: 'pi pi-home',      command: () => this.scrollTo('landing') },
+    { label: 'About',     icon: 'pi pi-user',      command: () => this.scrollTo('about') },
+    { label: 'Skills',    icon: 'pi pi-star',      command: () => this.scrollTo('herramientas') },
+    { label: 'Projects',  icon: 'pi pi-briefcase', command: () => this.scrollTo('projects') }
   ];
 
   @HostBinding('attr.data-section') activeSection = 'landing';
