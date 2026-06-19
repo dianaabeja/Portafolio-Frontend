@@ -25,27 +25,27 @@ export class ProjectsComponent {
   projects: Project[] = [
     {
       title: 'Nova Biometrics',
-      role: 'Frontend · UI/UX · CMS mock',
-      description: 'CMS administrativo para laboratorio con edición visual, SEO y certificaciones.',
+      role: 'Frontend · UI/UX · CMS mockup',
+      description: 'Administrative CMS for a lab with visual editing, SEO support, and certification workflows.',
       highlights: [
-        'Componentes de administración y edición de contenido',
-        'Diseño responsivo y experiencia de usuario',
-        'Validación de flujos clave para uso interno'
+        'Content management and admin interface components',
+        'Responsive design focused on usability',
+        'Validation of key internal business flows'
       ],
-      tags: ['Angular', 'TypeScript', 'SCSS', 'CMS Mock'],
+      tags: ['Angular', 'TypeScript', 'SCSS', 'CMS Mockup'],
       link: 'https://nova-labs-chi.vercel.app/',
       repo: 'https://github.com/dianaabeja/novaLabs',
       icon: 'pi pi-code',
       img: 'proyect3.png'
     },
     {
-      title: 'Mi Jardin',
+      title: 'My Garden',
       role: 'Frontend · Product design',
-      description: 'Aplicación para organizar cuidados de plantas y seguimiento simple del estado del jardín.',
+      description: 'Application to organize plant care and track the garden status with a simple workflow.',
       highlights: [
-        'Flujos de registro y seguimiento por planta',
-        'Vista clara para tareas frecuentes',
-        'Diseño enfocado en reutilización y usabilidad'
+        'Plant registration and progress-tracking flows',
+        'Clear view for recurring care tasks',
+        'UI designed for reuse and usability'
       ],
       tags: ['Angular', 'TypeScript'],
       link: 'https://mi-jardin-phi.vercel.app/',
@@ -54,13 +54,13 @@ export class ProjectsComponent {
       img: 'proyect1.png'
     },
     {
-      title: 'Mi Veterinaria',
-      role: 'Frontend · Administración',
-      description: 'Sistema para gestión de pacientes, productos y recetas con control de roles.',
+      title: 'My Veterinary',
+      role: 'Frontend · Administration',
+      description: 'System for managing patients, products, and prescriptions with role-based access control.',
       highlights: [
-        'Gestión de módulos clave para el negocio',
-        'Permisos por perfil y navegación clara',
-        'Integración de reportes y documentos básicos'
+        'Management of key business modules',
+        'Clear role-based navigation and permissions',
+        'Basic reporting and document integration'
       ],
       tags: ['React', 'TypeScript', 'Tailwind CSS'],
       link: 'https://mi-veterinaria-puce.vercel.app/',
