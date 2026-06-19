@@ -1,5 +1,5 @@
 <section id="projects" class="projects-section">
-  <h2 class="section-title">Proyectos destacados</h2>
+  <h2 class="section-title">Featured projects</h2>
   <div class="projects-grid">
     @for (project of projects; track project.title) {
     <p-card [header]="project.title" class="project-card">
@@ -8,7 +8,7 @@
         <div class="avatar-wrapper">
           <img
             [src]="project.img"
-            [alt]="'Captura del proyecto ' + project.title"
+            [alt]="'Screenshot of ' + project.title"
             class="avatar"
             loading="lazy"
             decoding="async"
@@ -35,7 +35,7 @@
       <ng-template #footer>
         <div class="project-action">
           <a [href]="project.link" target="_blank" rel="noopener noreferrer">
-            <p-button icon="pi pi-external-link" class="hero-btn">Demo</p-button>
+            <p-button icon="pi pi-external-link" class="hero-btn">Live</p-button>
           </a>
           <a [href]="project.repo" target="_blank" rel="noopener noreferrer">
             <p-button icon="pi pi-github" class="hero-btn">Repo</p-button>

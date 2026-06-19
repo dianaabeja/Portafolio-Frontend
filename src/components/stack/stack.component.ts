@@ -16,17 +16,17 @@ export class StackComponent {
   stackAreas: StackArea[] = [
     {
       title: 'Frontend',
-      description: 'Interfaces claras, responsivas y orientadas a la experiencia del usuario.',
+      description: 'Clear, responsive interfaces designed around the user experience.',
       items: ['Angular', 'Ionic', 'TypeScript', 'HTML/CSS', 'PrimeNG']
     },
     {
       title: 'Backend',
-      description: 'APIs y lógica de negocio con foco en mantenimiento, seguridad y escalabilidad.',
-      items: ['NestJS', 'Python', 'REST APIs', 'Autenticación', 'Validación']
+      description: 'APIs and business logic focused on maintainability, security, and scalability.',
+      items: ['NestJS', 'Python', 'REST APIs', 'Authentication', 'Validation']
     },
     {
       title: 'Data & Cloud',
-      description: 'Infraestructura y despliegues con visión de operación real y monitoreo básico.',
+      description: 'Infrastructure and deployments with a practical view of operations and monitoring.',
       items: ['AWS', 'S3 / CloudFront', 'PostgreSQL', 'GitHub Actions', 'Vercel']
     }
   ];
