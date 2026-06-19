@@ -1,72 +1,71 @@
 import { Component } from '@angular/core';
-import { Card } from 'primeng/card';
 import { Button } from 'primeng/button';
+import { Card } from 'primeng/card';
 import { Tag } from 'primeng/tag';
 
 interface Project {
   title: string;
   role: string;
   description: string;
-  highlights: string[];
+  responsibilities: string[];
   tags: string[];
   link: string;
   repo: string;
-  icon: string;
-  img?: string;
+  img: string;
 }
 
 @Component({
   selector: 'app-projects',
   imports: [Card, Button, Tag],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {
-  projects: Project[] = [
+  protected readonly projects: Project[] = [
     {
       title: 'Nova Biometrics',
-      role: 'Frontend · UI/UX · CMS mockup',
-      description: 'Administrative CMS for a lab with visual editing, SEO support, and certification workflows.',
-      highlights: [
-        'Content management and admin interface components',
-        'Responsive design focused on usability',
-        'Validation of key internal business flows'
+      role: 'Angular frontend · UX/UI · CMS demo',
+      description:
+        'Laboratory CMS with a public experience and an administrative workflow for managing content, SEO, and certifications.',
+      responsibilities: [
+        'Designed and built administrative views and components',
+        'Implemented content, media, and certification editing workflows',
+        'Created responsive interfaces and validated key interactions',
       ],
       tags: ['Angular', 'TypeScript', 'SCSS', 'CMS Mockup'],
       link: 'https://nova-labs-chi.vercel.app/',
       repo: 'https://github.com/dianaabeja/novaLabs',
-      icon: 'pi pi-code',
-      img: 'proyect3.png'
+      img: 'proyect3.png',
     },
     {
       title: 'My Garden',
-      role: 'Frontend · Product design',
-      description: 'Application to organize plant care and track the garden status with a simple workflow.',
-      highlights: [
-        'Plant registration and progress-tracking flows',
-        'Clear view for recurring care tasks',
-        'UI designed for reuse and usability'
+      role: 'Angular frontend · Product design',
+      description:
+        'Application for organizing plant care and reviewing progress through a simple, clear experience.',
+      responsibilities: [
+        'Built plant registration and growth-tracking flows',
+        'Created workflows for recurring care tasks',
+        'Designed reusable, usability-focused interfaces',
       ],
       tags: ['Angular', 'TypeScript'],
       link: 'https://mi-jardin-phi.vercel.app/',
       repo: 'https://github.com/dianaabeja/MiJardin',
-      icon: 'pi pi-globe',
-      img: 'proyect1.png'
+      img: 'proyect1.png',
     },
     {
       title: 'My Veterinary',
-      role: 'Frontend · Administration',
-      description: 'System for managing patients, products, and prescriptions with role-based access control.',
-      highlights: [
-        'Management of key business modules',
-        'Clear role-based navigation and permissions',
-        'Basic reporting and document integration'
+      role: 'React frontend · Administration',
+      description:
+        'System for managing patients, products, and veterinary prescriptions with role-based access.',
+      responsibilities: [
+        'Developed patient, inventory, and prescription modules',
+        'Implemented navigation and permissions by user role',
+        'Added basic reporting and document integration',
       ],
       tags: ['React', 'TypeScript', 'Tailwind CSS'],
       link: 'https://mi-veterinaria-puce.vercel.app/',
       repo: 'https://github.com/dianaabeja/MiVeterinaria',
-      icon: 'pi pi-heart',
-      img: 'proyect2.png'
-    }
+      img: 'proyect2.png',
+    },
   ];
 }

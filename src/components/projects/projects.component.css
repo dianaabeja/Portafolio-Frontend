@@ -49,11 +49,20 @@
 }
 
 .project-role {
-  margin: 0.6rem 0 0.2rem;
+  margin: 0.35rem 0 0.9rem;
   color: #f4ddff;
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+.project-field-label {
+  color: #f4ddff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin: 1.15rem 0 0;
+  text-transform: uppercase;
 }
 
 .project-description {
@@ -109,6 +118,37 @@
   object-fit: cover;
   filter: grayscale();
   
+}
+
+.architecture-card {
+  display: block;
+  margin-top: clamp(4.5rem, 9vw, 7rem);
+}
+
+.architecture-card__layout {
+  align-items: center;
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(240px, 0.78fr) minmax(0, 1.22fr);
+}
+
+.architecture-preview {
+  margin: 0;
+}
+
+.architecture-preview img {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .architecture-card__layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 
