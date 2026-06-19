@@ -47,16 +47,16 @@ export class HerramientasComponent implements OnInit, OnDestroy {
   categories = [
     { key: 'frontend', label: 'Frontend', icon: 'pi pi-desktop' },
     { key: 'backend',  label: 'Backend',  icon: 'pi pi-server'  },
-    { key: 'cloud',    label: 'Cloud y servidores', icon: 'pi pi-cloud' },
-    { key: 'data',     label: 'Bases de datos', icon: 'pi pi-database' },
-    { key: 'tools',    label: 'IA y herramientas', icon: 'pi pi-wrench'  },
+    { key: 'cloud',    label: 'Cloud & servers', icon: 'pi pi-cloud' },
+    { key: 'data',     label: 'Databases', icon: 'pi pi-database' },
+    { key: 'tools',    label: 'AI & tools', icon: 'pi pi-wrench'  },
   ];
 
   getLevelLabel(level: number): string {
-    if (level >= 85) return 'EXPERTO';
-    if (level >= 70) return 'AVANZADO';
-    if (level >= 50) return 'INTERMEDIO';
-    return 'APRENDIZ';
+    if (level >= 85) return 'EXPERT';
+    if (level >= 70) return 'ADVANCED';
+    if (level >= 50) return 'INTERMEDIATE';
+    return 'LEARNING';
   }
 
   getSkillsByCategory(cat: string): Skill[] {
